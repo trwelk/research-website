@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+  <link href="./output.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="text-gray-800 antialiased">
+  <nav class="top-0 sticky bg-white z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+
+    <div class="max-w-2xl mx-auto">
+
+
+      <div class="max-w-2xl mx-auto">
+
+        <nav class="border-gray-200">
+          <div class="container mx-auto flex flex-wrap items-center justify-between">
+
+            <button data-collapse-toggle="mobile-menu" type="button"
+              class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+              aria-controls="mobile-menu-2" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+              <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+                <li>
+                  <a href="#"
+                    class="md:bg-transparent text-black block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none"
+                    aria-current="page">Home</a>
+                </li>
+                <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Project
+                    Scope <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar"
+                    class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="#literatureSurvey"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Literature Survey</a>
+                      </li>
+                      <li>
+                        <a href="#researchGap" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Research
+                          Gap</a>
+                      </li>
+                      <li>
+                        <a href="#researchProblem"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Research Problem &
+                          Solution</a>
+                      </li>
+                      <li>
+                        <a href="#researchObjectives"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Research Objectives</a>
+                      </li>
+                      <li>
+                        <a href="#methodology"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Methodology</a>
+                      </li>
+                      <li>
+                        <a href="#technologies"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Technologies</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#milestones"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Milestones</a>
+                </li>
+                <li>
+                  <button id="downloadNavbarLink" data-dropdown-toggle="downloadNavbar"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Downloads<svg
+                      class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                    </svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="downloadNavbar"
+                    class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="#documents"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Documents</a>
+                      </li>
+                      <li>
+                        <a href="#presentations"
+                          class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Presentations</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#aboutUs"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About
+                    Us</a>
+                </li>
+                <li>
+                  <a href="#contact"
+                    class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  </nav>
+  <main>
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+      <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("./assets/img/food3.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div class="pr-12">
+              <h1 class="text-white font-semibold text-5xl">
+                Foodligence
+              </h1>
+              <p class="mt-4 text-lg text-gray-300">
+                OPTIMIZATION OF PROCESSES IN THE FOOD SUPPLY CHAIN TO REDUCE FOOD LOSS AND WASTE IN RESTAURANTS AND
+                HOTELS USING ARTIFICIAL INTELLIGENCE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px;">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <section id="literatureSurvey" class="pb-20 bg-gray-300 ">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center">
+          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <div
+              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+              <i class="fas fa-user-friends text-xl"></i>
+            </div>
+            <h3class="text-3xl mb-2 font-semibold leading-normal">
+              Literature Review
+              </h3>
+              <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                “How to measure food loss and waste? A material flow analysis application” published by V. Amicarelli,
+                C.
+                Bux and G. Lagioia emphasizes on adapting material flow analysis as a method to measure food loss and
+                waste [13]. The main application of material flow analysis in manufacturing is to measure the waste
+                produced at each step of the workflow-defined processes. In order to demonstrate how material flow
+                analysis can be used to measure or quantify waste, the research used one consumption-ready food and one
+                ingredient.
+                In the research paper “Analysis of post-harvest losses: An Internet of Things and machine learning
+                approach” done by Computer Engineering Department, PICT, Pune, Maharashtra, India has developed a
+                machine
+                learning algorithm which predicts which stock would degrade first [16]. It provides information to the
+                warehouse managers to come up with a dispatch sequence rather than following the first in first out
+                method. Further it discusses about the parameters which affect the food degradation. It has been found
+                that the amount of storage loss is determined by factors such as the number of days the stock has been
+                held, warehouse temperature and humidity, and harvesting time deviation from the optimal harvesting
+                period
+                (in number of days) [16].
+
+              </p>
+              <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                “Minimization of Food Waste in Retail Sector using Time-Series Analysis and Object Detection Algorithm”
+                by
+                H. Agarwal, B. Ahir, P. Bide, S. Jain and H. Barot [1], discusses on a solution to reduce food wastage
+                through the use of an inventory prediction system, smart dustbins and redistribution. The inventory
+                prediction system aims to forecast the inventory needed by the restaurant at a given time.
+
+              </p>
+              
+          </div>
+          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+              <img alt="..." src="./assets/img/food2.jpg" class="w-full align-middle rounded-t-lg" />
+              <blockquote class="relative p-8 mb-4">
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                  class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                  <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
+                </svg>
+                <h4 class="text-xl font-bold text-white">
+                  Top Notch Services
+                </h4>
+                <p class="text-md font-light mt-2 text-white">
+                  The Arctic Ocean freezes every winter and much of the
+                  sea-ice then thaws every summer, and that process will
+                  continue whatever happens.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="researchGap" class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+        <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+          <h2 id="researchGap" class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+            Research Gap</h2>
+          <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Following areas are the research gaps
+            found in most of the recent researches.
+
+          </p>
+        </div>
+        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <h3 class="mb-4 text-2xl font-semibold">Collaborative Data Flow and Analytics</h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">The research focuses on all four of the
+              aspects listed under "Effective Collaborative Data Flow," "Measures for Quantification of Food Lost and
+              Wasted," "Importance of Real-time Analytics for Operational Decision Making," and "Importance of Menu
+              Recommendation System," which is where the research's novelty exists. These factors make sure that data is
+              acquired on all the processes in the targeted food supply chain.</p>
+
+          </div>
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <h3 class="mb-4 text-2xl font-semibold">Freshness Index and Donation Platform</h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">The lack of a generic solution which
+              predicts the freshness index.• Focuses only on one process from the entire food supply chain, ignorance of
+              other processes might make the available data less reliable or important
+              In majority of the studies conducted, Only the identification of the problem is there, No recommendations
+              are provided
+              and The results are based on a single model without the consideration of multiple models.
+
+            </p>
+
+          </div>
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <h3 class="mb-4 text-2xl font-semibold">Lack of Portion Size Prediction </h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">The research is either carried out on a
+              theoretical perspective (providing recommendations) but not focusing on how it could be achieved in real
+              world scenario. Based on the above, the following figure depicts the areas that has been taken into
+              consideration by the selected research papers and compares it to the solution that is planned to be
+              implemented “Foodligence”</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-20">
+
+      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px;">
+
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+            <img alt="..." class="max-w-full rounded-lg shadow-lg" src="./assets/img/food6.jpg" />
+          </div>
+          <div id="researchProblem" class="w-full md:w-5/12  ml-auto mr-auto px-4">
+            <div class="md:pr-12">
+              <div
+                class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
+                <i class="fas fa-rocket text-xl"></i>
+              </div>
+              <h1 class="text-4xl font-semibold">Research Problem & Solution
+              </h1>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                “Food”, a daily essential for all the humans. However, there are those in this world who do not have
+                enough access to food and are starving. 828 million people experienced hunger in 2021.
+                According to report on the scope of the "food loss and waste" problem, the globe annually discards 1.3
+                billion metric tons of food [either wasted or lost] [4]. In terms of finances, it is estimated that food
+                is wasted or lost worldwide on an annual basis to the value of $1 trillion [4]
+              </p>
+              <h1 class="text-2xl font-semibold">Proposed Solution</h1>
+              <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?"
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="researchObjectives" class="relative pt-16 pb-32 flex content-center items-center justify-center"
+      style="min-height: 75vh;">
+      <div class="absolute top-0 w-full h-full bg-center bg-cover"
+        style='background-image: url("./assets/img/food3.jpg");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+      </div>
+      <div class="container relative mx-auto">
+        <div class="items-center flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div class="pr-12">
+              <h1 class="text-white font-semibold text-5xl">
+                Research Objectives
+              </h1>
+              <p class="mt-4 text-lg text-gray-300">
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px;">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+
+
+
+    <section class="pb-20 bg-gray-300 -mt-24">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                  <i class="fas fa-award"></i>
+                </div>
+                <h6 class="text-xl font-semibold">Improve the flow of collaborative data throughout the food supply
+                  chain and quantify food wasted & lost
+                </h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Divide details about your product or agency work into parts.
+                  A paragraph describing a feature will be enough.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                  <i class="fas fa-retweet"></i>
+                </div>
+                <h6 class="text-xl font-semibold">Identifying the most suitable portion size for a customer based on a
+                  set of parameters
+                </h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Keep you user engaged by providing meaningful information.
+                  Remember that by this time, the user is curious.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                  <i class="fas fa-fingerprint"></i>
+                </div>
+                <h6 class="text-xl font-semibold">Predict food wastage in warehouses and provide recommendations to
+                  minimize food wastage
+                </h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Write a few lines about each one. A paragraph describing a
+                  feature will be enough. Keep you user engaged!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+
+          </div>
+          <div class="w-full md:w-4/12 px-4 text-center">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+              <div class="px-4 py-5 flex-auto">
+                <div
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                  <i class="fas fa-retweet"></i>
+                </div>
+                <h6 class="text-xl font-semibold">Identifying the most suitable portion size for a customer based on a
+                  set of parameters
+                </h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Keep you user engaged by providing meaningful information.
+                  Remember that by this time, the user is curious.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="methodology" class="bg-white dark:bg-white">
+      <div class="flex flex-wrap justify-center text-center mt-24">
+
+        <div class="w-full lg:w-9/12 px-4">
+          <h2 class="text-4xl font-semibold">Methodology</h2>
+          <p class="font-light lg:text-xl mt-8">Focusing on reducing food loss and waste from a single process or
+            treating the processes as independent has made existing solutions or research less effective and efficient
+            in addressing the core problem addressed because every process in the supply chain is interconnected and
+            important for decision-making (consumption data is essential to plan purchases for the following day). This
+            is what distinguishes the research conducted by the author and co-authors as being distinctive and
+            successful because it focuses on all of the supply chain processes identified and ensures that transparency
+            is affirmed to support collaborative data flow and combined data analysis to mitigate the core problem
+            through informed decisions. Each defined process also has distinctive features or solutions. The research
+            addresses the two main problems for hotels, which are transparency (not knowing what happens in other
+            departments in the food supply chain) and not knowing the processes that cause excessive food loss and
+            waste. There is a comparable commercial product named Winnow Solution that has been explored for the
+            regional, Asian Pacific, and international markets. The product's flaw is that it ignores other activities
+            and only takes manufacturing and consumption processes into account. The distribution, purchasing, storage,
+            production, services, and consuming processes along the food supply chain are the focus of the proposed
+            solution. Identifying data collection points, setting up data capture apps, and organizing the flow of
+            captured data among all other components are the key goals of each process. Additionally, each component has
+            a specific function for process optimization or enhancement to reduce food loss and waste, as shown in the
+            diagram below. The proposed solution will be commercialized as Foodligence.
+            The features include a "Demand Predictor" that uses order data and past purchases data to forecast the
+            minimum amount of stock needed to meet daily operational demand and reduce purchasing process losses, a
+            "Expiry Predictor with Freshness Index" that provides the best before date for perishable ingredients and
+            food items to assure all the purchased goods are used effectively to prevent any food losses or waste, and a
+            platform that allows subscribers to “Donate” the excess to needy. In order to prevent food wastage at the
+            consumption level, "Portion Size Predictor" focuses on determining the appropriate portion size for a
+            customer depending on the criteria entered. Furthermore, “Collaborative Data Flow and Analytics” concentrate
+            on all processes to provides improved transparency of processes for effective decision making to control
+            food loss and waste, making recommendations for customers and quantifying food loss and waste using defined
+            analytical measures.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+        <!-- Row -->
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Collaborative data
+            </h2>
+            <!-- List -->
+            <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation of
+                  Material Flow Analysis</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation of Cost
+                  Budget Profit Analysis</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation of
+                  Recommendation System</span>
+              </li>
+            </ul>
+            <p class="mb-8 font-light lg:text-xl">Item-based recommendation was selected as the strongest algorithm for
+              making recommendations on menu choices. The author has pinned with item-based because user-based has
+              considerable restrictions, as stated in the methodologies chapter. Additionally, from a business
+              perspective, hotels and restaurants want their customers to be exposed to more and more products instead
+              of sticking to a limited selection when looking at their sales. Item-based ensures that customers are
+              exposed to more food items while user-based only exposes them to a limited range.</p>
+          </div>
+          <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./assets/img/food5.jpg"
+            alt="dashboard feature image">
+        </div>
+        <!-- Row -->
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./assets/img/food3.jpg" alt="feature image 2">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Freshness Index
+              Predictor Implementation</h2>
+            <!-- List -->
+            <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation Of
+                  machine learning models</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Hyperparameter
+                  Tuning</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation of
+                  donation platform</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Implementation Of Hotel
+                  management system</span>
+              </li>
+            </ul>
+            <p class="font-light lg:text-xl">Initialy the necessary libraries are imported into the notebook first. The
+              libraries needed to preprocess and split the datasets are shown in Fig. 5.2. Functions for interacting
+              with the file system and operating system are contained in the pandas module. The acquisition of
+              processing arrays and multidimensional array objects are two features of numerical python, also known as
+              NumPy. Computer vision issues were solved using the OpenCV Python package.
+              Next, we used the open-source Python machine learning toolkit scikit- learn's xgboost() module. After
+              being loaded, a module instance is built using its default hyperparameters. The model will then be trained
+              using the train features that we previously isolated. The metrics will then be calculated using the
+              Scikit-Learn functions mean absolute error and mean squared error.
+
+            </p>
+          </div>
+        </div>
+
+
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Portion Size
+              Prediction
+            </h2>
+            <!-- List -->
+            <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Data Collection </span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Estimate most
+                  appropriate portion size for customers</span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Generate bill of
+                  materials for used in meal production</span>
+              </li>
+            </ul>
+            <p class="mb-8 font-light lg:text-xl">The amount of food a consumer is likely to consume is determined by
+              his or her hunger level. Several factors can affect how much a customer is likely to consume. (Age,
+              Gender, Time of Day, Selected food item). These values pertaining to each of these factors can be captured
+              for each user by using Facebook and Google integration, where the user may sign up using either of the
+              previously mentioned accounts and the required data can be fetched from the user’s accounts. This data can
+              then be used in the portion size estimation process. The sign-up process will only be a onetime process
+              since an account for the user will be created within our system. To go along with this a mobile app will
+              also be developed which will be used to allow customers to customize their preferences as well as their
+              dislikes. Users may also enter allergies to make sure that any meal they order will not contain any
+              ingredients that the user is allergic to.</p>
+          </div>
+          <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./assets/img/food6.jpg"
+            alt="dashboard feature image">
+        </div>
+        <!-- Row -->
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./assets/img/food8.jpg" alt="feature image 2">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Demand Forecast
+              Implementation</h2>
+            <!-- List -->
+            <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Forecasting Stock
+                  Required
+                </span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Predicting the Optimum
+                  Supplier
+                </span>
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Facility Check
+                </span>
+              </li>
+            </ul>
+            <p class="font-light lg:text-xl">Utilized Linear Regression and random Forest model as the Prophet model
+              does not look for casual relationships between the past and the future. It simply finds the best curve to
+              fit the data using a linear logistic curve component for the external regressor and therefore it did not
+              serve the purpose
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section id="technologies" class="pt-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center text-center mb-24">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Technologies Used </h2>
+          </div>
+        </div>
+        <section class="bg-white dark:bg-gray-900">
+          <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
+            <div
+              class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/tensorflow.png">
+                <p><strong>Tensorflow</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/python.png">
+                <p><strong>Python</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/googlecloud.png">
+                <p><strong>Google Cloud</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/kubernetes.png">
+                <p><strong>Kubernetes</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/doker.png">
+                <p><strong>Docker</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/mongo.jpg">
+                <p><strong>MongoDB</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/react.png">
+                <p><strong>React</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/node.png">
+                <p><strong>Node</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/flutter.png">
+                <p><strong>Flutter</strong></p>
+              </a>
+              <a href="#" class="flex flex-col	 items-center lg:justify-center">
+                <img src="./assets/img/redux.png">
+                <p><strong>Redux</strong></p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section id="milestones" class="pt-20 pb-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center text-center mb-24">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Milestones</h2>
+          </div>
+        </div>
+        <div class="min-h-screen bg-gray-100">
+
+          <div class="min-h-screen flex justify-center">
+            <div class="w-2/3 mx-auto">
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Project Proposal
+                      </div>
+                      <div class="flex flex-row">
+                        <button class="text-blue-500 mr-2 hover:text-blue-300 transition duration-200"><i
+                            class="far fa-edit"></i></button>
+                        <button class="text-red-500 hover:text-red-300 transition duration-200"><i
+                            class="far fa-trash-alt"></i></button>
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      A Project Proposal is presented to potential sponsors or clients to receive funding or get your
+                      project approved. </div>
+                  </div>
+
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>14</div>
+                      <div>January</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+
+                </div>
+              </div>
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>11</div>
+                      <div>May</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Progress Presentation I
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Progress Presentation I reviews the 50% completetion status of the project. This reveals any gaps
+                      or inconsistencies in the design/requirements. </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Research Paper
+                      </div>
+                      <div class="flex flex-row">
+                        <button class="text-blue-500 mr-2 hover:text-blue-300 transition duration-200"><i
+                            class="far fa-edit"></i></button>
+                        <button class="text-red-500 hover:text-red-300 transition duration-200"><i
+                            class="far fa-trash-alt"></i></button>
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Describes what you contribute to existing knowledge, giving due recognition to all work that you
+                      referred in making new knowledge </div>
+                  </div>
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>30</div>
+                      <div>June</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+                </div>
+              </div>
+
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Progress Presentation II
+                      </div>
+                      <div class="flex flex-row">
+                        <button class="text-blue-500 mr-2 hover:text-blue-300 transition duration-200"><i
+                            class="far fa-edit"></i></button>
+                        <button class="text-red-500 hover:text-red-300 transition duration-200"><i
+                            class="far fa-trash-alt"></i></button>
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Progress Presentation II reviews the 90% completetion status demonstration of the project. Along
+                      with a Poster presesntation which describes the project as a whole. </div>
+                  </div>
+
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>10</div>
+                      <div>October</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+
+                </div>
+              </div>
+
+
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>20</div>
+                      <div>сентября</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Website Assessment
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      The Website helps to promote our research project and reveals all details related to the project.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>14</div>
+                      <div>November</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Logbook
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Status of the project is validated through the Logbook. This also includes, Status documents 1 &
+                      2. </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Final Report
+                      </div>
+                      <div class="flex flex-row">
+                        <button class="text-blue-500 mr-2 hover:text-blue-300 transition duration-200"><i
+                            class="far fa-edit"></i></button>
+                        <button class="text-red-500 hover:text-red-300 transition duration-200"><i
+                            class="far fa-trash-alt"></i></button>
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Final Report evalutes the completed project done throughout the year. Marks mentioned below
+                      includes marks for Individual & group reports and also Final report. </div>
+                  </div>
+
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>14</div>
+                      <div>November</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+
+                </div>
+              </div>
+
+
+              <div class="flex flex-row w-full">
+                <!-- left col -->
+
+                <div class="w-2/5 px-2 py-10">
+
+                </div>
+                <!--line column-->
+                <div class="w-1/5  flex justify-center">
+                  <div class="relative flex h-full w-1 bg-green-300 items-center justify-center">
+                    <div
+                      class="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-green-300 leading-none text-center z-10 bg-white font-thin">
+                      <div>14</div>
+                      <div>November</div>
+                    </div>
+                  </div>
+                </div>
+                <!--right column-->
+                <div class="w-2/5 px-2 py-10 ">
+                  <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                    <div class="text-gray-600 mb-2 flex justify-between">
+                      <div class="font-bold">
+                        Final Presentation & Viva
+                      </div>
+                    </div>
+                    <div class="text-gray-600">
+                      Viva is held individually to assess each members contribution to the project. </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="documents" class="pb-48">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center text-center mb-24">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold">Documents </h2>
+          </div>
+        </div>
+        <section class="bg-white dark:bg-gray-900">
+          <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
+            <div
+              class="grid grid-cols-1 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-2 lg:grid-cols-4 dark:text-gray-400">
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Group
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Topic Assessment</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1nsvdFBGVVZ_JQR8V34x6q9Q_VaEHGxqp?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    12th December 2021
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Group
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Project Charter</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1c7bPXgRk9dPqKSY_bBLzpIL3WyfjXSSw?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    12th January 2022
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Individual
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Project Proposal</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1DYhnUwfQWO2jDv49W0cKe8FheEcEj6ZM?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    11th - February 2022
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Individual
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Status Documents I</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1s3OVhotO0HVsFasc0P3PAcfTHK_5YjR-?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    13th May 2022
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Individual
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Status Documents II</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1s3OVhotO0HVsFasc0P3PAcfTHK_5YjR-?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    14th November 2022
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Group
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Research Paper</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1GRcT9CZvzlxmr3DGn9okHY9NO2XP4SXE?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    30th july 2022
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Group
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Final Report</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1NMveRZdSKV_QRBiEgKVpwDpfLBAYJLoK?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    21st October 2022
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="flex justify-center">
+                <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                  <div class="py-3 px-6 border-b border-gray-300">
+                    Group
+                  </div>
+                  <div class="p-6">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2">Poster</h5>
+                    <p class="text-gray-700 text-base mb-4">
+                      Click the below Link to download the file.
+                    </p>
+                    <button type="button"
+                      class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                      <a target="_blank"
+                        href="https://drive.google.com/drive/folders/1NMveRZdSKV_QRBiEgKVpwDpfLBAYJLoK?usp=sharing">Download</a></button>
+                  </div>
+                  <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                    21st October 2022
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+        <section id="presentations" class="pb-48">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center text-center mb-24">
+              <div class="w-full lg:w-6/12 px-4">
+                <h2 class="text-4xl font-semibold">Presentations </h2>
+              </div>
+            </div>
+            <section class="bg-white dark:bg-gray-900">
+              <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
+                <div
+                  class="grid grid-cols-1 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-2 lg:grid-cols-4 dark:text-gray-400">
+                  <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                      <div class="py-3 px-6 border-b border-gray-300">
+                        Group
+                      </div>
+                      <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">Project Proposal </h5>
+                        <p class="text-gray-700 text-base mb-4">
+                          Click the below Link to download the file.
+                        </p>
+                        <button type="button"
+                          class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                          <a target="_blank"
+                            href="https://drive.google.com/drive/folders/1s3KXW1XXT-inAFKYa9WHZ-R7Y5vJ5cJg?usp=sharing">Download</a></button>
+                      </div>
+                      <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                        24th January 2022
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                      <div class="py-3 px-6 border-b border-gray-300">
+                        Group
+                      </div>
+                      <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">Progress Presentation I</h5>
+                        <p class="text-gray-700 text-base mb-4">
+                          Click the below Link to download the file.
+                        </p>
+                        <button type="button"
+                          class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                          <a target="_blank"
+                            href="https://drive.google.com/drive/folders/1gbwMR2wJ3kp4qO9wEPvJP_zEHt9yVvqb?usp=sharing">Download</a></button>
+                      </div>
+                      <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                        13th May 2022
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                      <div class="py-3 px-6 border-b border-gray-300">
+                        Group
+                      </div>
+                      <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">Progress Presentation II</h5>
+                        <p class="text-gray-700 text-base mb-4">
+                          Click the below Link to download the file.
+                        </p>
+                        <button type="button"
+                          class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                          <a target="_blank"
+                            href="https://drive.google.com/drive/folders/1_Yw5zjJL4aTYL6qLi4yX-X5Z_t9CNCU7?usp=sharing">Download</a></button>
+                      </div>
+                      <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                        13th oct 2022
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                      <div class="py-3 px-6 border-b border-gray-300">
+                        Group
+                      </div>
+                      <div class="p-6">
+                        <h5 class="text-gray-900 text-xl font-medium mb-2">Final Presentation </h5>
+                        <p class="text-gray-700 text-base mb-4">
+                          Click the below Link to download the file.
+                        </p>
+                        <button type="button"
+                          class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                          <a target="_blank"
+                            href="https://drive.google.com/drive/folders/1ffP8aNGcTbPP1TOuWW1W8cLitX9A30Up?usp=sharing">Download</a></button>
+                      </div>
+                      <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                        14th November 2022
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+
+
+
+
+
+
+            <section id="aboutUs" class="pt-20 pb-20">
+              <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center text-center mb-24">
+                  <div class="w-full lg:w-6/12 px-4">
+                    <h2 class="text-4xl font-semibold">Meet Our Team !</h2>
+
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-center">
+
+                  <div class="max-w-2xl mx-auto">
+
+                    <div
+                      class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg" src="./assets/img/dr_janaka.jpg" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Dr. Janaka
+                            Wijekoon
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Supervisor</p>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="max-w-2xl mx-auto">
+
+                    <div
+                      class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg" src="./assets/img/ms_dilani.jpg" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Ms. Dilani
+                            Lunugalage
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Co Supervisor</p>
+
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class=" pb-48">
+              <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center">
+
+                  <div class="max-w-xl mx-auto">
+
+                    <div style="max-width: 288px;"
+                      class="bg-white shadow-md border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg  h-80 w-64" src="./assets/img/kishore.jpg" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Kumar G K
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Data Science</p>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="max-w-xl mx-auto">
+
+                    <div style="max-width: 288px;"
+                      class="bg-white shadow-md border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg  h-80 w-64" src="./assets/img/trewon.jpg" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Weerasooriya
+                            S T P
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Software Engineering</p>
+
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="max-w-xl mx-auto">
+
+                    <div style="max-width: 288px;"
+                      class="bg-white shadow-md border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg  h-80 w-64" src="./assets/img/gangul.png" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-xl tracking-tight mb-2 dark:text-white">
+                            Ediriwickramasuriya G.K
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Information Technology
+                        </p>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="max-w-xl mx-auto">
+
+                    <div style="max-width: 288px;"
+                      class="bg-white shadow-md border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                        <img class="rounded-t-lg h-80 w-64" src="./assets/img/ryan.jpg" alt="">
+                      </a>
+                      <div class="p-5">
+                        <a href="#">
+                          <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">Moses R C
+                          </h5>
+                        </a>
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 font-bold">Software Engineering</p>
+
+                        <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">Sri Lanka Institute of Information
+                          Technology</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+          
+  </main>
+  <section>
+
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+</body>
+<script>
+  function toggleNavbar(collapseID) {
+    document.getElementById(collapseID).classList.toggle("hidden");
+    document.getElementById(collapseID).classList.toggle("block");
+  }
+</script>
+
+</html>
